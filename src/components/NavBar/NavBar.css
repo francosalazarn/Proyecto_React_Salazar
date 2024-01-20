@@ -1,0 +1,33 @@
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: black !important;
+}
+
+ul, li, ol {
+    list-style: none;
+    margin: auto;
+}
+
+.home_logo {
+    font-size: 20px;
+}
+
+.navbar_actionables {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar_items {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar {
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
