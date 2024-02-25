@@ -1,14 +1,21 @@
 import React from 'react';
+import './Item.css'
 
 const Item = ({producto}) => {
+
+
   return (
-    <div key={producto.id}>
-        <h2>{producto.title}</h2>
-        <h2>Precio: {producto.price}</h2>
-        <h2>Stock: {producto.rating.count}</h2>
-        <p>Descripcion: {producto.description}</p>
-    </div>
+
+    <Link to={`/detalle/${producto.id}`}>
+
+      <div key={producto.id} className='container'>
+          <h2>{producto.nombre}</h2>
+          <img src={producto.img} alt={producto.nombre} />
+      </div> 
+
+    </Link>
+    
   )
 }
 
-export default Item
+export default Item;

@@ -1,17 +1,28 @@
 import React, {useState,useEffect} from 'react'
 import ItemList from '../ItemList/ItemList';
+import './ItemListContainer.css'
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({greeting}) => {
 
-    const [productos, setProductos] = useState([]);
+    const [productos,setProductos] = useState([]);
+
+    const {categoryId} = useParams()
 
     useEffect(()=>{
-
+        
         const fetchData = async () => {
             try {
-                fetch('https://fakestoreapi.com/products')
-                .then(res=>res.json())
-                .then(json=>setProductos(json))
+                const response = await fetch("/productos.json");
+                const data = await response.json()
+
+                if(categoryId){
+                    const filteredProducts = data.filter((p) => p.categoria == categoryId)
+                    setProductos(filteredProducts)
+                }else{
+                    setProductos(data)
+                }
+  
             }catch(error){
                 console.log("Error en el fetch "+error)
             }
@@ -19,13 +30,11 @@ const ItemListContainer = ({greeting}) => {
 
         fetchData()
 
-    },[])
+    },[categoryId])
 
 
   return (
-    <div>
-
-        <h1>{greeting}</h1>
+    <div className='itemcontainer'>
 
         {productos.length == 0 
         ? 
@@ -33,7 +42,6 @@ const ItemListContainer = ({greeting}) => {
         : 
         <ItemList productos={productos}/>
         }
-
 
     </div>
   )

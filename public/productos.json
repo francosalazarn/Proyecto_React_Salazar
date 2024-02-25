@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Playstation 5",
+         "img": "/assets/img/playstation5.png",
+        "precio": 500,
+        "stock": 2,
+        "description": "La consola más buscada",
+        "categoria": "Consolas"
+    },
+    {
+        "id": 2,
+        "nombre": "Xbox X",
+         "img": "/assets/img/xboxX.png",
+        "precio": 400,
+        "stock": 10,
+        "description": "La consola más rentable",
+        "categoria": "Consolas"
+    },
+    {
+        "id": 3,
+        "nombre": "PC Gamer",
+         "img": "/assets/img/pcgamer.jpeg",
+        "precio": 1000,
+        "stock": 5,
+        "description": "La consola más potente",
+        "categoria": "PC"
+    },
+    {
+        "id": 4,
+        "nombre": "Iphone 15 Pro Max S",
+        "img": "/assets/img/iphone15.jpeg",
+        "precio": 600,
+        "stock": 12,
+        "description": "El celular más vendido",
+        "categoria": "Celulares"
+    }
+]
