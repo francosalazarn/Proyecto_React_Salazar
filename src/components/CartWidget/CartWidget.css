@@ -3,3 +3,8 @@
     align-items: center;
     gap: 3px;
 }
+
+.cart_icon {
+    max-height: 24px;
+    max-width: 24px;
+}
